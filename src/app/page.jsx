@@ -91,4 +91,4 @@ export default function Home() {
       </button>
     </div>
   )
-}
+} // Forçando a atualização para a Vercel
