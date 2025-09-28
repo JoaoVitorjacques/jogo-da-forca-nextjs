@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect, useCallback } from "react"
 import { HangmanDrawing } from "./components/HangmanDrawing"
@@ -7,8 +7,13 @@ import { Keyboard } from "./components/Keyboard"
 import { getRandomWord } from "./wordList.js"
 
 export default function Home() {
-  const [wordToGuess, setWordToGuess] = useState(getRandomWord());
+  const [wordToGuess, setWordToGuess] = useState(""); // 1. Começa com o estado vazio
   const [guessedLetters, setGuessedLetters] = useState([]);
+
+  // 2. Sorteia a palavra APENAS no navegador, uma vez, depois de a página carregar
+  useEffect(() => {
+    setWordToGuess(getRandomWord());
+  }, []);
 
   const incorrectLetters = guessedLetters.filter(
     letter => !wordToGuess.includes(letter)
