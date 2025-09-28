@@ -1,0 +1,12 @@
+export function getRandomWord() {
+  const words = [
+    "REACT", "NEXTJS", "JAVASCRIPT", "TAILWIND", "VERCEL", "GITHUB", "COMPONENTE", 
+    "ESTADO", "PROPS", "INTERFACE", "DESENVOLVEDOR", "PROGRAMACAO", "ALGORITMO",
+    "VARIAVEL", "FUNCAO", "OBJETO", "METODO", "CLASSE", "HERANCA", "POLIMORFISMO",
+    "ENCAPSULAMENTO", "API", "JSON", "HTTP", "REQUISICAO", "RESPOSTA", "SERVIDOR",
+    "CLIENTE", "NAVEGADOR", "FRONTEND", "BACKEND", "DATABASE", "AUTENTICACAO",
+    "RESPONSIVO", "FRAMEWORK", "BIBLIOTECA"
+  ];
+
+  return words[Math.floor(Math.random() * words.length)];
+}
